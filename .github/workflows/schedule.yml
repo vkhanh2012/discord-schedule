@@ -1,45 +1,28 @@
 name: Gui Thong Bao Discord Tap Trung
 
-# ==============================================================================
-# ⏰ 1. CẤU HÌNH THỜI GIAN TỰ ĐỘNG GỬI (CRON JOB)
-# LƯU Ý: Giờ trên GitHub Actions dùng chuẩn UTC (Giờ Việt Nam = Giờ UTC + 7)
-# Công thức quy đổi: [Giờ VN muốn gửi] - 7 = [Giờ UTC nhập vào đây]
-# Cú pháp cron: 'Phút Giờ NgàyTháng Tháng NgàyTrongTuần'
-# Giá trị NgàyTrongTuần: 0 = CN, 1 = T2, 2 = T3, 3 = T4, 4 = T5, 5 = T6, 6 = T7
-# ==============================================================================
 on:
   schedule:
-    - cron: '0 13 * * 0'   # Gửi 20:00 Chủ Nhật Giờ VN  (= 13:00 UTC) -> Tổng hợp tuần mới
-    - cron: '0 12 * * 3'   # Gửi 19:00 Thứ 4 Giờ VN     (= 12:00 UTC) -> Nhắc nhở trước lớp học
-    - cron: '0 12 * * 5'   # Gửi 19:00 Thứ 6 Giờ VN     (= 12:00 UTC) -> Nhắc nhở trước lớp học
-    
-  # Cho phép bấm nút "Run workflow" thủ công trên web GitHub để gửi ngay lập tức
+    # Chạy mỗi ngày vào lúc 19:00 Giờ VN (= 12:00 UTC)
+    - cron: '0 12 * * *'
+  
   workflow_dispatch:
 
-# ==============================================================================
-# 🛠️ 2. CÁC BƯỚC MÁY CHỦ GITHUB TỰ ĐỘNG THỰC THI
-# ==============================================================================
 jobs:
   run-bot:
-    runs-on: ubuntu-latest  # Sử dụng hệ điều hành Ubuntu mới nhất của GitHub
+    runs-on: ubuntu-latest
     steps:
-      # Bước 1: Tải toàn bộ code từ Repository về máy chủ ảo của GitHub
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # Bước 2: Cài đặt môi trường Python 3.11 trên máy chủ
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      # Bước 3: Cài đặt các thư viện cần thiết (requests & schedule)
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests schedule
+          pip install requests
 
-      # Bước 4: Chạy file Python gửi thông báo lên Discord
-      # ⚠️ Nếu sau này bạn đổi tên file Python, nhớ sửa 'lich_hoc.py' ở dưới thành tên mới
       - name: Run Python Script
         run: python lich_hoc.py
