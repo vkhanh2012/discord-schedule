@@ -54,9 +54,9 @@ def nhac_nho_truoc_buoi_hoc():
 # ==============================================================================
 # 🔥 PHẦN 1: CHẠY TEST NGAY LẬP TỨC (Sau khi test xong, hãy COMMENT đoạn này lại)
 # ==============================================================================
-if __name__ == "__main__":
-    print("⏳ Đang gửi tin nhắn TEST lên Discord...")
-    gui_thong_bao("🧪 [TEST] Thông báo thử nghiệm hệ thống Discord Webhook")
+# if __name__ == "__main__":
+#     print("⏳ Đang gửi tin nhắn TEST lên Discord...")
+#     gui_thong_bao("🧪 [TEST] Thông báo thử nghiệm hệ thống Discord Webhook")
 
 
 # ==============================================================================
