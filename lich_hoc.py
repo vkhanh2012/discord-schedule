@@ -48,7 +48,7 @@ def thong_bao_chu_nhat():
 
 # 2. Nhắc nhở trước giờ học 30 phút (19h00 Thứ 4 & Thứ 6)
 def nhac_nho_truoc_buoi_hoc():
-    gui_thong_bao("⏰ [NHẮC NHỞ] Lớp học Automation Test sẽ bắt đầu sau 30 phút nữa (19h30)!")
+    gui_thong_bao("⏰ [NHẮC NHỞ] Lớp học Automation Test sẽ bắt đầu sau 30 phút nữa (20h00)!")
 
 
 # ==============================================================================
