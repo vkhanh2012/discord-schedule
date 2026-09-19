@@ -24,4 +24,4 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run Python Script
-        run: python bot_lich_hoc.py
+        run: python lich_hoc.py
