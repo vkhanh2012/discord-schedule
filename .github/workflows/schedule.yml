@@ -1,0 +1,27 @@
+name: Gui Thong Bao Discord Tap Trung
+
+on:
+  schedule:
+    # Giờ trên GitHub dùng chuẩn UTC (Việt Nam là UTC+7, nên lấy Giờ VN - 7 tiếng)
+    - cron: '0 13 * * 0'   # 20:00 Chủ Nhật Giờ VN  (= 13:00 UTC)
+    - cron: '0 12 * * 3'   # 19:00 Thứ 4 Giờ VN     (= 12:00 UTC)
+    - cron: '0 12 * * 5'   # 19:00 Thứ 6 Giờ VN     (= 12:00 UTC)
+  workflow_dispatch: # Cho phép nhấn nút bấm chạy thử thủ công bất kỳ lúc nào
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Python Script
+        run: python bot_lich_hoc.py
