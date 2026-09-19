@@ -52,7 +52,7 @@ def nhac_nho_truoc_buoi_hoc():
 
 
 # ==============================================================================
-# 🔥 PHẦN 1: CHẠY TEST NGAY LẬP TỨC (Sau khi test xong, hãy COMMENT đoạn này lại)
+# 🔥 PHẦN 1: DÙNG CHO CHẠY TEST TRÊN MÁY TÍNH (Comment lại khi dùng GitHub Actions)
 # ==============================================================================
 # if __name__ == "__main__":
 #     print("⏳ Đang gửi tin nhắn TEST lên Discord...")
@@ -60,8 +60,16 @@ def nhac_nho_truoc_buoi_hoc():
 
 
 # ==============================================================================
-# ⏰ PHẦN 2: CHẠY LỊCH TỰ ĐỘNG NẾU MÁY TÍNH TREO CHƯƠNG TRÌNH NGẦM 
-# (Nếu dùng GitHub Actions ở bước dưới thì KHÔNG CẦN đoạn vòng lặp while True này)
+# 🚀 PHẦN 2: CHẠY CHÍNH THỨC TRÊN GITHUB ACTIONS (MỞ ĐOẠN NÀY BẰNG CÁCH BỎ COMMENT)
+# ==============================================================================
+if __name__ == "__main__":
+    # Khi GitHub Actions kích hoạt, nó sẽ tự động chạy hàm này 
+    # để lấy nội dung từ lich_hoc.json gửi lên Discord
+    gui_thong_bao()
+
+
+# ==============================================================================
+# ⏰ PHẦN 3: DÙNG KHI TREO MÁY TÍNH CÁ NHÂN (KHÔNG CẦN THIẾT NẾU DÙNG GITHUB ACTIONS)
 # ==============================================================================
 """
 schedule.every().sunday.at("20:00").do(thong_bao_chu_nhat)
