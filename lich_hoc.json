@@ -1,9 +1,9 @@
 {
-  "title": "📅 Lịch học Automation Test tuần này",
-  "days": [1, 3, 5],
+  "title": "[Chính thức]📅 Lịch học Automation Test tuần này",
+  "days": [3, 5],
   "schedule": [
-    "📌 **Thứ 3 (19h30):** Element Locators & Xpath nâng cao",
-    "📌 **Thứ 5 (19h30):** Thực hành Web Automation với Selenium/Playwright"
+    "📌 **Thứ 5:** 20h00",
+    "📌 **Thứ 7:** 20h00"
   ],
-  "footer": "Chúc các bạn có buổi học hiệu quả!"
+  "footer": "Chúc các bạn có một tuần học hiệu quả!"
 }
