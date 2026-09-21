@@ -2,8 +2,8 @@ name: Gui Thong Bao Discord Tap Trung
 
 on:
   schedule:
-    # Chạy mỗi ngày vào lúc 19:00 Giờ VN (= 12:00 UTC)
-    - cron: '0 12 * * *'
+    # Chạy mỗi ngày vào lúc 19:30 Giờ VN (= 12:00 UTC)
+    - cron: '30 12 * * *'
   
   workflow_dispatch:
 
