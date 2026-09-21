@@ -57,7 +57,7 @@ def kiem_tra_va_gui():
     # 2. Nếu là ngày học trùng trong JSON -> Gửi nhắc nhở
     elif thu_hien_tai in cac_ngay_hoc:
         print(f"Hôm nay (Thứ {thu_hien_tai + 2}) có lịch học -> Gửi nhắc nhở.")
-        gui_thong_bao("⏰ [NHẮC NHỞ] Lớp học Automation Test sẽ bắt đầu sau 30 phút nữa (19h30)!")
+        gui_thong_bao("⏰ [NHẮC NHỞ] Lớp học Automation Test sẽ bắt đầu sau 30 phút nữa (20h00)!")
     
     # 3. Không phải ngày học -> Bỏ qua
     else:
